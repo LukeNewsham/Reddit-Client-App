@@ -6,9 +6,11 @@ export default function Navbar() {
         <div className='nav'>
             <a href='/' className='siteTitle'> Reddit App </a>
             <ul>
-
                 <li>
-                    <a href='/favprites' className='favorites'> Favorites: </a>
+                    <a href='/favorites' className='favorites'> Favorites </a>
+                </li>
+                <li>
+                    <a href='/About' className='About'> About </a>
                 </li>
             </ul>
         </div> 
