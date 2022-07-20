@@ -3,3 +3,11 @@
   padding: 0;
   font-family: 'Calibri Light';
 }
+
+.mainContainer {
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

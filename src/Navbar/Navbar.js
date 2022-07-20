@@ -1,16 +1,17 @@
 import './Navbar.css';
+import {Link} from 'react-router-dom'
 
 
 export default function Navbar() {
     return (
         <div className='nav'>
-            <a href='/' className='siteTitle'> Reddit App </a>
+            <Link to='/home' className='siteTitle'> Reddit App </Link>
             <ul>
                 <li>
-                    <a href='/favorites' className='favorites'> Favorites </a>
+                    <Link to='/favorites' className='favorites'> Favorites </Link>
                 </li>
                 <li>
-                    <a href='/About' className='About'> About </a>
+                    <Link to='/About' className='About'> About </Link>
                 </li>
             </ul>
         </div> 
