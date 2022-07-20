@@ -7,7 +7,43 @@
 .mainContainer {
   padding: 2rem;
   text-align: center;
-  display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.search {
+  height: 2rem;
+  width: 30%;
+  min-width: 25rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin: 2rem 2rem 5rem 2rem;
+  font-size: 1.5rem;
+
+
+  
+}
+
+.homeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.articleContainer {
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 2rem;
+  padding: 2rem;
+  box-shadow: 0rem 0rem 1rem 0.2rem lightgray;
+  border-radius: 3rem;
+  height: 40rem;
+  width: 50%;
+  min-width: 20rem;
+}
+
+.articleContainer a {
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: black
 }
