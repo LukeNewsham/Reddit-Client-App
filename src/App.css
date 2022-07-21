@@ -132,3 +132,69 @@ img {
 }
 
 
+
+
+
+@media only screen and (max-width: 800px) { 
+
+
+  .mainContainer {
+    padding: 1.5rem;
+    
+  }
+
+  .search {
+    height: 3rem;
+    width: 100%;
+    min-width: auto;
+    margin: 0;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .author {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: auto;
+    color: lightblue;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+  
+  .subreddit {
+    position: absolute;
+    bottom: 1.5rem;
+    left: auto;
+    right: 1.5rem;
+    color: lightgrey;
+    font-size: 0.8rem;
+  }
+
+
+  .articleContainer {
+   
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding: 3rem 1.5rem;
+    min-height: 10rem;
+    width: 100%;
+    min-width: 0rem;
+    overflow: hidden;
+    border: 0.2rem solid white;
+    text-align: left;
+    gap: 1rem;
+  }
+
+
+  .stats {
+    font-size: 1rem;
+    font-weight: bold;
+    width: auto;
+    height: 100%;
+    text-align: left;
+  
+  }
+
+
+}

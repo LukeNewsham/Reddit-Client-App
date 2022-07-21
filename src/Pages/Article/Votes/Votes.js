@@ -1,10 +1,12 @@
 import React from 'react';
+import upArrow from './upArrow.png'
 
 //function class - function classes use hooks
 export default function Votes(props) {
     return (
         <div class='stats'>
-            <p> {'Upvotes: ' + props.article.ups}</p>                 
+            <img class='upArrow' src ={upArrow} height = '20rem' />
+            <p> {props.article.ups}</p>                 
         </div>
     )
 }
