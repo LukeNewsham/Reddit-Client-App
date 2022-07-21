@@ -9,11 +9,13 @@ import React, {useState, useEffect} from 'react';
 
 function App() {
     const [articles, setArticles] = useState([]);
-    const [search, setSearch] = useState(['bananas']);
+    const [search, setSearch] = useState('bananas');
+    const [favorites, setFavorites] = useState([])
 
 
   useEffect(() => {
-    fetch("https://www.reddit.com./r/bananas.json").then(res => {
+    console.log(search)
+    fetch("https://www.reddit.com./r/" + search + ".json").then(res => {
        if (res.status != 200) {
         console.log('Error: Link not found!');
         return
@@ -27,16 +29,30 @@ function App() {
   }, [search]);
 
 
+  function addToFavorites(article) {
+    
+    let favoritedArticles = favorites;
+    
+    for (let i = 0; i < favoritedArticles.length; i++) {      
+      if (favoritedArticles[i].title === article.title ) {
+        return
+      }
+    }
+
+    setFavorites((prev) => [...prev, article])
+  }
+
+
   return ( 
     <>     
       <Navbar />
       
       <div className='mainContainer'> 
-      <input type='text' className='search' placeholder='Search' />       
+      <input type='text' className='search' placeholder='Search' value={search} onChange={e => setSearch(e.target.value)} />       
         <Routes>
-          <Route path="/home" element = {<Home articles={articles} />} />
+          <Route path="/home" element = {<Home articles={articles} addToFavorites={addToFavorites}/>} />
           <Route path="/about" element = {<About />} />
-          <Route path="/favorites" element = {<Favorites />} />
+          <Route path="/favorites" element = {<Favorites articles={articles} favorites={favorites} />} />
         </Routes>
       </div>
     </>

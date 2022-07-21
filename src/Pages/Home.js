@@ -1,16 +1,19 @@
-import Article from '../Components/Article';
+import Article from './Article/Article';
+import React, {useState, useEffect} from 'react';
 
 
-export default function Home({articles}) {
+export default function Home({articles, addToFavorites,favoriteMode}) {
+
+    
     
     return (
-        <>
-        {console.log(articles)}
-        {/* <p> {'Subreddit subscribers: ' + articles[0].data.subreddit_subscribers }</p> */}
-        <div class='homeContainer'>    
-            {  
-                (articles != null) ? articles.map((article, index) => <Article key={index} article={article.data}/>) : ''  
+        <> 
+        <div class='homeContainer'>  
+             
+            { 
+                (articles != null) ? articles.map((article) => <Article key={article.data.id} article={article.data} addToFavorites={addToFavorites}/>) : ''  
             }
+            
         </div>
         </>
     )

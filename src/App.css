@@ -43,12 +43,18 @@ img {
   text-decoration: none;
   margin: 2rem;
   padding: 4rem;
-  box-shadow: 0rem 0rem 1rem 0.2rem lightgray;
+  box-shadow: 0rem 0rem 1rem 0.2rem rgb(231, 231, 231);
   border-radius: 3rem;
   min-height: 10rem;
   max-width: 35rem;
   width: 100%;
   min-width: 20rem;
+  overflow: hidden;
+  border: 0.2rem solid white;
+}
+
+.articleContainer:hover {
+  box-shadow: 0rem 0rem 1rem 0.2rem rgb(208, 207, 207);
 }
 
 .articleContainer a {
@@ -65,6 +71,32 @@ img {
   font-weight: bold;
 }
 
+.favoritesButton {
+  position: absolute;
+  top: 0rem;
+  right: -2rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: darkgray;
+  cursor: pointer;
+  background-color: white;
+  height: 3rem;
+  width: 7rem;
+  text-align: center;
+  transform: rotate(-135deg);
+  
+}
+
+.favoritesButton:hover {
+  color: white;
+  background-color: rgb(255, 230, 86);
+  transition:0.3s;
+}
+
+.plusButton {
+  transform: rotate(135deg);
+}
+
 .stats {
   width: 5rem;
   height: 100%;
@@ -75,4 +107,9 @@ img {
   flex-grow: 1;
   width: auto;
   
+}
+
+
+[favoriteMode='On'] {
+  border: 0.2rem solid yellow;
 }
