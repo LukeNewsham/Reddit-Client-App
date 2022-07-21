@@ -17,13 +17,14 @@ img {
 }
 
 .search {
-  height: 2rem;
+  height: 3rem;
   width: 30%;
   min-width: 25rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   text-align: center;
   margin: 2rem 2rem 5rem 2rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
 
 
   
@@ -66,9 +67,16 @@ img {
 .author {
   position: absolute;
   bottom: 2rem;
-  left: 5rem;
+  left: 4rem;
   color: lightblue;
   font-weight: bold;
+}
+
+.subreddit {
+  position: absolute;
+  bottom: 2rem;
+  right: 4rem;
+  color: lightgrey;
 }
 
 .favoritesButton {
@@ -98,8 +106,11 @@ img {
 }
 
 .stats {
+  font-size: 1.2rem;
+  font-weight: bold;
   width: 5rem;
   height: 100%;
+  text-align: left;
 
 }
 
@@ -109,7 +120,15 @@ img {
   
 }
 
+.upArrow {
+  padding: 0;
+  position: relative;
+  left: -0.3rem;
+}
+
 
 [favoriteMode='On'] {
   border: 0.2rem solid yellow;
 }
+
+
