@@ -8,7 +8,6 @@ export default function Navbar() {
         <div className='nav'>
             <Link to='/home' className='siteTitle'> Reddit App </Link>
             
-            
             <ul>
                 <li>
                     <Link to='/favorites' className='favorites'> Favorites </Link>

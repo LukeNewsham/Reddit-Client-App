@@ -2,7 +2,7 @@ import Article from './Article/Article';
 import React, {useState, useEffect} from 'react';
 
 
-export default function Home({articles, addToFavorites,favoriteMode}) {
+export default function Home({articles, addToFavorites}) {
 
     
     

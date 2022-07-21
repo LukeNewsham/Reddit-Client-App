@@ -19,7 +19,7 @@ export default function Article(props) {
 
             <Votes article={props.article} />  
             <PostContent article={props.article} />
-            <FavoritesButton article={props.article} handleFavorite={handleFavorite} addToFavorites={props.addToFavorites}/>
+            <FavoritesButton article={props.article} handleFavorite={handleFavorite} addToFavorites={props.addToFavorites} removeFromFavorites={props.removeFromFavorites}/>
         
         </div>
     );

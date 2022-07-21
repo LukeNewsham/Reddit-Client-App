@@ -17,14 +17,14 @@ img {
 }
 
 .search {
-  height: 3rem;
-  width: 30%;
+  height: 2.3rem;
   min-width: 25rem;
-  border-radius: 2rem;
+  border-radius: 0.7rem;
   text-align: center;
   margin: 2rem 2rem 5rem 2rem;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1.4rem;
+  background-color: rgb(243, 243, 243);
+  border: none;
 
 
   
@@ -45,7 +45,7 @@ img {
   margin: 2rem;
   padding: 4rem;
   box-shadow: 0rem 0rem 1rem 0.2rem rgb(231, 231, 231);
-  border-radius: 3rem;
+  border-radius: 2rem;
   min-height: 10rem;
   max-width: 35rem;
   width: 100%;
@@ -150,6 +150,7 @@ img {
     margin: 0;
     font-size: 1.5rem;
     margin: 1rem 0;
+    
   }
 
   .author {
@@ -184,6 +185,8 @@ img {
     border: 0.2rem solid white;
     text-align: left;
     gap: 1rem;
+    border-radius: 1.5rem;
+    
   }
 
 

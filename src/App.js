@@ -9,7 +9,7 @@ import React, {useState, useEffect} from 'react';
 
 function App() {
     const [articles, setArticles] = useState([]);
-    const [search, setSearch] = useState('bananas');
+    const [search, setSearch] = useState('popular');
     const [favorites, setFavorites] = useState([])
 
 
@@ -29,17 +29,23 @@ function App() {
   }, [search]);
 
 
-  function addToFavorites(article) {
-    
-    let favoritedArticles = favorites;
-    
+  function addToFavorites(article) {    
+    let favoritedArticles = favorites;    
     for (let i = 0; i < favoritedArticles.length; i++) {      
       if (favoritedArticles[i].title === article.title ) {
         return
       }
     }
-
     setFavorites((prev) => [...prev, article])
+  }
+
+  function removeFromFavorites(article) { 
+
+    let favoritedArticles = favorites;
+    let newFavoritedArticles = favoritedArticles.filter(favorited => favorited.title !== article.title)
+    setFavorites(newFavoritedArticles)
+
+
   }
 
 
@@ -52,7 +58,7 @@ function App() {
         <Routes>
           <Route path="/home" element = {<Home articles={articles} addToFavorites={addToFavorites}/>} />
           <Route path="/about" element = {<About />} />
-          <Route path="/favorites" element = {<Favorites articles={articles} favorites={favorites} />} />
+          <Route path="/favorites" element = {<Favorites articles={articles} favorites={favorites} removeFromFavorites={removeFromFavorites} />} />
         </Routes>
       </div>
     </>
