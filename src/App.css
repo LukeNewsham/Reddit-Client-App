@@ -4,7 +4,14 @@
   font-family: 'Comfortaa';
 }
 
+h1 {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
 
+h2 {
+  font-size: 1.5rem;
+}
 
 img {
   padding: 2rem 0;
@@ -43,7 +50,7 @@ img {
   display: flex;
   align-items: center;    
   font-size: 1.5rem;
-  padding: 0 3rem;
+  padding: 0 2rem;
   color: rgb(115, 173, 204);
 }
 
@@ -61,8 +68,8 @@ img {
 
 .nav a.siteTitle {
   font-size: 2rem;
-  font-family: 'Calibri';
   height: auto;
+  font-weight: bolder;
 }
 
 .mainContainer {
@@ -119,7 +126,8 @@ img {
 .postContainer a {
   font-size: 0.7rem;
   text-decoration: none;
-  color: black
+  color: black;
+  text-align: left;
 }
 
 .author {
@@ -195,14 +203,18 @@ img {
 
 @media only screen and (max-width: 1000px) { 
 
+  h2 {
+    font-size: 1rem;
+  }
+
   .nav {
       justify-content: space-around;
-      align-items: stretch;  
+      align-items: stretch; 
+      padding: 1.5rem 0 ; 
   }
 
   .nav a.siteTitle {
       font-size: 2.5rem;
-      font-family: 'Calibri';
   }
 
   .nav ul {    
@@ -215,14 +227,10 @@ img {
       height: 100%;
       display: flex;
       align-items: center;    
-      font-size: 1.5rem;
-      padding: 0 0.5rem;
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
   }
 
-  .nav a.siteTitle {
-      font-size: 3rem;
-      
-  }
 
 
   .mainContainer {
@@ -234,7 +242,7 @@ img {
 
   .author {
     position: absolute;
-    bottom: 1.5rem;
+    bottom: 2.5rem;
     left: 1.5rem;
     right: auto;
     color: lightblue;
@@ -245,10 +253,11 @@ img {
   .subreddit {
     position: absolute;
     bottom: 1.5rem;
-    left: auto;
-    right: 1.5rem;
+    left: 1.5rem;
     color: lightgrey;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    text-align: left;
+    
   }
 
 
@@ -262,7 +271,6 @@ img {
     min-width: 0rem;
     overflow: hidden;
     border: 0.2rem solid white;
-    text-align: left;
     gap: 1rem;
     border-radius: 1.5rem;
     
@@ -279,17 +287,18 @@ img {
   }
 
   .search {
+    background-color: white;
     z-index: 2;
     top: auto;
     bottom: 2rem;
     left: 10%;  
     right: 10%;
-    height: 2rem;
+    height: 2.5rem;
     border-radius: 0.7rem;
     text-align: center;
-    font-size: 1.rem;
-    border: 0.1rem solid lightgrey;
+    font-size: 1.3rem;
     border-radius: 0.5rem;
+    box-shadow: 0rem 0rem 1rem 0.1rem lightgrey;
     
   }
   

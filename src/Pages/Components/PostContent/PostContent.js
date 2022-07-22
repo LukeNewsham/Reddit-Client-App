@@ -5,7 +5,7 @@ export default function PostContent(props) {
         <>
             <div class='info'> 
                 <a href={"https:/www.reddit.com" + props.post.data.permalink}> 
-                    <h1> {props.post.data.title} </h1>
+                    <h2> {props.post.data.title} </h2>
                 </a>                
                 <img width ='100%' src={props.post.data.url} alt=''/>
                 <p class='author'>{'by ' + props.post.data.author}</p> 
