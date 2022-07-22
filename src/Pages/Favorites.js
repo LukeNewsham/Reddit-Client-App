@@ -1,19 +1,13 @@
-import Article from './Article/Article';
-import React, {useState, useEffect} from 'react';
+import Post from './Components/Post/Post.js';
 
-
-export default function Favorites({favorites, articles, removeFromFavorites}) {
-
-    
-    
+export default function Favorites({favorites, posts, removeFromFavorites}) {
     return (
         <>
-        <div class='homeContainer'>  
-            
-            { 
-                (favorites != null) ? favorites.map((favorite, index) => <Article key={favorite.id} article={favorite} favoriteMode='On' removeFromFavorites={removeFromFavorites}/>) : ''  
-            }
-        </div>
+            <div class='homeContainer'>  
+                { 
+                    (favorites != null) ? favorites.map((favorite, index) => <Post key={favorite.id} post={favorite} favoriteMode='On' removeFromFavorites={removeFromFavorites}/>) : ''  
+                }
+            </div>
         </>
     )
 }

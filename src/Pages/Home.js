@@ -1,20 +1,13 @@
-import Article from './Article/Article';
-import React, {useState, useEffect} from 'react';
+import Post from './Components/Post/Post.js';
 
-
-export default function Home({articles, addToFavorites}) {
-
-    
-    
+export default function Home({posts, addToFavorites}) {
     return (
         <> 
-        <div class='homeContainer'>  
-             
-            { 
-                (articles != null) ? articles.map((article) => <Article key={article.data.id} article={article.data} addToFavorites={addToFavorites}/>) : ''  
-            }
-            
-        </div>
+            <div class='homeContainer'>
+                { 
+                    (posts != null) ? posts.map((post) => <Post key={post.data.id} post={post.data} addToFavorites={addToFavorites}/>) : ''  
+                }                
+            </div>
         </>
     )
 }
