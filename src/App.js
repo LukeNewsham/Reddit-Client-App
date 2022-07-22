@@ -16,12 +16,12 @@ function App() {
   useEffect(() => {
     console.log(search)
     fetch("https://www.reddit.com./r/" + search + ".json").then(res => {
-       if (res.status != 200) {
+       if (res.status !== 200) {
         console.log('Error: Link not found!');
         return
       }
       res.json().then(data => {
-        if (data != null) {
+        if (data !== null) {
           setPosts(data.data.children);
         }
       })

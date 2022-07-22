@@ -8,7 +8,7 @@ export default function Post(props) {
     const [favoriteMode, setFavoriteMode] = useState(props.favoriteMode);
 
     function handleFavorite() {        
-        (favoriteMode == 'On') ? setFavoriteMode('') : setFavoriteMode('On');
+        (favoriteMode === 'On') ? setFavoriteMode('') : setFavoriteMode('On');
     }
      
     return (

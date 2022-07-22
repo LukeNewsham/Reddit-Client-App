@@ -5,7 +5,7 @@ export default function FavoritesButton(props) {
         props.handleFavorite();
 
         try {
-            if (window.location.href == 'http://localhost:3000/home') {
+            if (window.location.href === 'http://localhost:3000/home') {
                 props.addToFavorites(props.post); 
             }
         } catch(err) {
@@ -13,7 +13,7 @@ export default function FavoritesButton(props) {
             }        
 
         try {
-            if (window.location.href == 'http://localhost:3000/favorites') {
+            if (window.location.href === 'http://localhost:3000/favorites') {
                 props.removeFromFavorites(props.post);
             }   
         } catch(err) {
@@ -24,7 +24,7 @@ export default function FavoritesButton(props) {
     return (   
         <div class='favoritesButton' onClick={wrapper}> 
             <p class='plusButton'  posts={props.posts}> 
-                { (props.favoriteMode == 'On') ? '-' : '+'}
+                { (props.favoriteMode === 'On') ? '-' : '+'}
             </p>
         </div> 
     )
